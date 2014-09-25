@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='cncApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Countries n Capitals</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="js/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+
+	<!-- <div class="title">
+		{{title}}
+	</div> -->
+	<div></div>
+	<div class="container">
+	<a href="#/">Home</a>
+	<a href="#/countries">Countries</a>
+
+		<div ng-view></div>
+		<!-- <button ng-click="list()"> Click here</button>
+
+		 -->
+	</div> <!-- end of controller -->
+</body>
+</html>
