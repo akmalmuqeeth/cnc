@@ -13,12 +13,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="c in countries">
+				<tr ng-repeat="c in countries | orderBy :'countryName' ">
 					<td>{{c.countryName}}</td>
 					<td>{{c.countryCode}}</td>
 					<td>{{c.capital}}</td>
-					<td>{{c.areaInSqKm}}</td>
-					<td>{{c.population}}</td>
+					<td>{{c.areaInSqKm | number}}</td>
+					<td>{{c.population | number:0}}</td>
 					<td>{{c.continentName}}</td>
 					<td><a href="#/countries/{{c.countryCode}}/capital">Details</a></td>
 				</tr>

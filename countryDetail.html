@@ -1,1 +1,45 @@
-<h2>Details : {{countryCode}}</h2>
+<div class="title">{{country.countryName}}</div>
+
+<table class="table table-striped">
+			
+			<tbody>
+
+				<tr>
+					<td>Population</td>
+					<td>{{country.population | number:0}}</td>
+				</tr>
+				<tr>
+					<td>Area</td>
+					<td>{{country.areaInSqKm | number}}</td>
+				</tr>
+				<tr>
+					<td>Capital</td>
+					<td>{{country.capital}}</td>
+				</tr>
+				<tr>
+					<td>Flag:</td>
+					<td>
+						<img style="width: 300px;height: 200px" ng-src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif" />
+					</td>
+				</tr>
+				<tr>
+				<td>Map:</td>
+					<td>
+						<img id='myImage'  ng-src="http://www.geonames.org/img/country/250/{{country.countryCode | uppercase}}.png" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>Neighbours: </td>
+					<td>
+					<ul>
+						<li ng-repeat="n in neighbours">
+							<a href="#/countries/{{n.countryCode}}/capital">{{n.name}}</a>
+						</li>
+					</ul>
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
